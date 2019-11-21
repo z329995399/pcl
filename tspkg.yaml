@@ -4,7 +4,7 @@ version: 1.9.1
 extra_deps:
   apt: libeigen3-dev build-essential linux-libc-dev cmake cmake-gui
        libusb-1.0-0-dev libusb-dev libudev-dev mpi-default-dev
-       openmpi-bin openmpi-common libflann1.8 libflann-dev libeigen3-dev       libboost-all-dev libvtk5.10-qt4 libvtk5.10 libvtk5-dev libqhull*
+       openmpi-bin openmpi-common libflann1.8 libflann-dev libeigen3-dev       libboost-all-dev libvtk6.2-qt libvtk6.2 libvtk6-dev libqhull*
        libgtest-dev freeglut3-dev pkg-config libxmu-dev libxi-dev
        mono-complete qt-sdk openjdk-8-jdk openjdk-8-jre
 
@@ -17,7 +17,7 @@ build: |
     cd build
     #cmake -DBUILD_GPU=OFF -DWITH_VTK=OFF -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR -DCMAKE_BUILD_TYPE=$CMAKE_BUILD_TYPE ..
     cmake -D CMAKE_BUILD_TYPE=None  -D BUILD_GPU=OFF -DWITH_VTK=OFF  -D CMAKE_INSTALL_PREFIX=$TSPKG_PREFIX_PATH  ../
-    make -j4
+    make -j8
     make install
     popd
   }
