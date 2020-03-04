@@ -2,11 +2,7 @@ name: pcl
 version: 1.9.1
 
 extra_deps:
-  apt: libeigen3-dev build-essential linux-libc-dev cmake cmake-gui
-       libusb-1.0-0-dev libusb-dev libudev-dev mpi-default-dev
-       openmpi-bin openmpi-common libflann1.8 libflann-dev libeigen3-dev       libboost-all-dev libvtk6.2-qt libvtk6.2 libvtk6-dev libqhull*
-       libgtest-dev freeglut3-dev pkg-config libxmu-dev libxi-dev
-       mono-complete qt-sdk openjdk-8-jdk openjdk-8-jre
+  apt: libflann1.8 libflann-dev libeigen3-dev libqhull*
 
 build: |
   export CMAKE_PREFIX_PATH=$INSTALL_DIR:$CMAKE_PREFIX_PATH
